@@ -148,6 +148,7 @@ var CreateProductViewModel = function (app, dataModel) {
             message: "Необходимо указать цену."
         }
     });
+    self.volume = ko.observable();
     self.inStock = ko.observable();
 
     self.save = function() {

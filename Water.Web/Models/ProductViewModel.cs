@@ -22,6 +22,11 @@ namespace Water.Web.Models
         public string ProductName { get; set; }
 
         /// <summary>
+        /// Объём
+        /// </summary>
+        public decimal? Volume { get; set; }
+
+        /// <summary>
         /// Стоимость
         /// </summary>
         public decimal Cost { get; set; }

@@ -19,13 +19,19 @@
                         <input class="form-control" id="lastName" data-bind="value: productName">
                     </div>
                     <div class="form-group">
-                        <label for="cost">Цена</label>
+                        <label for="cost">Объём, л.</label>
+                        <div class='input-group'>
+                            <input type='text' id='cost' class="form-control" data-bind="numeric : {}, value: volume" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cost">Цена, руб.</label>
                         <div class='input-group'>
                             <input type='text' id='cost' class="form-control" data-bind="numeric : {}, value: cost" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inStock">В наличии</label>
+                        <label for="inStock">В наличии, шт.</label>
                         <div class='input-group'>
                             <input type='text' id='inStock' class="form-control" data-bind="numeric : {}, value: inStock" />
                         </div>

@@ -28,6 +28,11 @@ namespace Water.Domain.Models
         public decimal Cost { get; set; }
 
         /// <summary>
+        /// Объём
+        /// </summary>
+        public decimal? Volume { get; set; }
+
+        /// <summary>
         /// Количество в наличии / на складе
         /// </summary>
         public int InStock { get; set; }

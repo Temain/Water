@@ -53,7 +53,6 @@ namespace Water.Web
                 "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/font-awesome.min.css",
                 "~/Content/bootstrap-datetimepicker.css",
                 "~/Content/Site.css"));
         }
