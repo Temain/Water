@@ -1,0 +1,59 @@
+﻿<!-- ko with: createSale -->
+@*<div class="heading">
+    <a href="#" class="back-link" data-bind="click: $root.navigateToSale, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"><i class="fa fa-arrow-circle-left"></i></a>
+    <h2>Добавление информации о продаже</h2>
+</div>*@
+
+<a href="#" data-bind="click: $root.navigateToSale, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"> Назад к списку</a>
+
+<div class="panel panel-widget forms-panel">
+    <div class="forms">
+        <div class="form-grids widget-shadow" data-example-id="basic-forms">
+            <div class="form-title">
+                <h4>Редактирование информации о доставке :</h4>
+            </div>
+            <div class="form-body">
+                <form>
+                    <div class="form-group">
+                        <label for="client">Покупатель</label>
+                        <select id="client" class="form-control" data-bind="value: clientId, options: clients, optionsText: 'clientFullName', optionsValue: 'clientId', optionsCaption: ''"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="employee">Продавец</label>
+                        <select id="employee" class="form-control" data-bind="value: employeeId, options: employees, optionsText: 'employeeFullName', optionsValue: 'employeeId', optionsCaption: ''"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Наименование</label>
+                        <input type="text" id="product" class="form-control" data-bind="typeahead: { api: '/api/Product', data : $data, key: 'productId' }, value: productName" data-provide="typeahead" placeholder="Введите название" autocomplete="off" value="" />
+                        <input type="hidden" data-bind="value: productId" />
+                        <div class="text-danger msg-text" style="display: none">
+                            <span class="glyphicon glyphicon glyphicon-exclamation-sign form-control-feedback"></span><span>Не найдено</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfProducts">Количество</label>
+                        <div class='input-group'>
+                            <input type='text' id='numberOfProducts' class="form-control" data-bind="numeric : {}, value: numberOfProducts" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalCost">Общая стоимость</label>
+                        <div class='input-group'>
+                            <input type='text' id='totalCost' class="form-control" data-bind="numeric : {}, value: totalCost" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="saleDate">Дата продажи</label>
+                        <div class='input-group'>
+                            <input type='text' id='saleDate' class="form-control" data-bind="datepicker: saleDate, datepickerOptions : { locale: 'ru', format: 'DD.MM.YYYY' }" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default" data-bind="click: save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

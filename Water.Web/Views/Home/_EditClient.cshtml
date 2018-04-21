@@ -1,0 +1,45 @@
+﻿<!-- ko with: editClient -->
+@*<div class="heading">
+    <a href="#" class="back-link" data-bind="click: $root.navigateToClient, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"><i class="fa fa-arrow-circle-left"></i></a>
+    <h2>Редактирование информации о покупателе</h2>
+</div>*@
+
+<a href="#" data-bind="click: $root.navigateToClient, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"> Назад к списку</a>
+
+<div class="panel panel-widget forms-panel">
+    <div class="forms">
+        <div class="form-grids widget-shadow" data-example-id="basic-forms">
+            <div class="form-title">
+                <h4>Редактирование информации о покупателе:</h4>
+            </div>
+            <div class="form-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="lastName" >Фамилия</label>
+                        <div class="col-sm-20">
+                            <input class="form-control" id="lastName" data-bind="value: lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">Имя</label>
+                        <input class="form-control" id="firstName" data-bind="value: firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName" >Отчество</label>
+                        <input class="form-control" id="middleName" data-bind="value: middleName">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <div class='input-group'>
+                            <input type='text' id='phone' class="form-control" data-bind="value: phone" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default" data-bind="click: save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

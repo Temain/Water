@@ -1,0 +1,41 @@
+﻿<!-- ko with: editProduct -->
+@*<div class="heading">
+        <a href="#" class="back-link" data-bind="click: $root.navigateToProduct, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"><i class="fa fa-arrow-circle-left"></i></a>
+        <h2>Редактирование информации о товаре</h2>
+    </div>*@
+
+<a href="#" class="back-link" data-bind="click: $root.navigateToProduct, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"> Назад к списку</a>
+
+<div class="panel panel-widget forms-panel">
+    <div class="forms">
+        <div class="form-grids widget-shadow" data-example-id="basic-forms">
+            <div class="form-title">
+                <h4>Редактирование информации о товаре:</h4>
+            </div>
+            <div class="form-body">
+                <form>
+                    <div class="form-group">
+                        <label for="lastName">Название</label>
+                        <input class="form-control" id="lastName" data-bind="value: productName">
+                    </div>
+                    <div class="form-group">
+                        <label for="cost">Цена</label>
+                        <div class='input-group' id='cost'>
+                            <input type='text' class="form-control" data-bind="value: cost" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inStock">В наличии</label>
+                        <div class='input-group' id='inStock'>
+                            <input type='text' class="form-control" data-bind="value: inStock" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default" data-bind="click: save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

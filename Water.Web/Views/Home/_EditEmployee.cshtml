@@ -1,0 +1,43 @@
+﻿<!-- ko with: editEmployee -->
+@*<div class="heading">
+    <a href="#" class="back-link" data-bind="click: $root.navigateToEmployee, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"><i class="fa fa-arrow-circle-left"></i></a>
+    <h2>Редактирование информации о сотруднике</h2>
+</div>*@
+
+ <a href="#" data-bind="click: $root.navigateToEmployee, tooltip: { title: 'Вернуться назад', placement: 'bottom', trigger: 'hover' }"> Назад к списку</a>
+
+<div class="panel panel-widget forms-panel">
+    <div class="forms">
+        <div class="form-grids widget-shadow" data-example-id="basic-forms">
+            <div class="form-title">
+                <h4>Редактирование информации о сотруднике:</h4>
+            </div>
+            <div class="form-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="lastName">Фамилия</label>
+                        <input class="form-control" id="lastName" data-bind="value: lastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstName">Имя</label>
+                        <input class="form-control" id="firstName" data-bind="value: firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Отчество</label>
+                        <input class="form-control" id="middleName" data-bind="value: middleName">
+                    </div>
+                    <div class="form-group">
+                        <label for="employeeDateStart">Дата начала работы</label>
+                        <div class='input-group date'>
+                            <input type='text' id='employeeDateStart' class="form-control" data-bind="datepicker: employeeDateStart, datepickerOptions : { locale: 'ru', format: 'DD.MM.YYYY' }" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default" data-bind="click: save"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
